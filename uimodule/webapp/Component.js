@@ -1,10 +1,10 @@
 sap.ui.define(
-    ["sap/ui/core/UIComponent", "sap/ui/Device", "com/myorg/viewSettingsDialogSort/model/models"],
+    ["sap/ui/core/UIComponent", "sap/ui/Device", "com/myorg/viewSettingsDialogSort/model/models", "sap/ui/model/json/JSONModel"],
     /**
      * @param {typeof sap.ui.core.UIComponent} UIComponent
      * @param {typeof sap.ui.Device} Device
      */
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, JSONModel) {
         "use strict";
 
         return UIComponent.extend("com.myorg.viewSettingsDialogSort.Component", {
@@ -26,6 +26,13 @@ sap.ui.define(
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                const settingsModel = new JSONModel({
+                    selectKey: "downloads365",
+                    sortOrderDecending: true
+                });
+
+                this.setModel(settingsModel, "settings")
             },
         });
     }

@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <ViewSettingsDialog id="linkHeaderViewSettingsDialog" confirm="handleConfirm" sortDescending="{settings>/sortOrderDecending}" selectedSortItem="downloads365">
+    <sortItems>
+      <ViewSettingsItem key="downloadsCurrentFortnight" text="downloadsCurrentFortnight"/>
+      <ViewSettingsItem key="downloadsCurrentMonth" text="downloadsCurrentMonth" />
+      <ViewSettingsItem id="downloads365" key="downloads365" text="downloads365" />
+      <ViewSettingsItem key="vscodeInstalls" text="vscodeInstalls"/>
+      <ViewSettingsItem key="updatedAt" text="updatedAt" />
+      <ViewSettingsItem key="createdAt" text="createdAt" />
+      <ViewSettingsItem key="addedToBoUI5" text="addedToBoUI5" />
+    </sortItems>
+  </ViewSettingsDialog>
+</core:FragmentDefinition>
